@@ -1,102 +1,233 @@
-// ? Question 1: Branching
-// Write a branching statement that checks if a number is even or odd.
-// If the number is even, log "The number is even."
-// If the number is odd, log "The number is odd."
-let number = 3;
-if (number % 2 === 0) {
-    console.log("The number is even.");
-} else {
-    console.log("The number is odd.");
+/*
+Exercise 1: maxOfTwoNumbers()
+
+In this exercise, create a function named maxOfTwoNumbers. 
+It should take two numbers as inputs and return the larger number. 
+If they're equal, return either one.
+
+Exercise 1 has been completed for you:
+*/
+
+const maxOfTwoNumbers = (x, y) => {
+    if (x >= y) {
+      return x;
+    } else {
+      return y;
+    }
+  }
+  
+  console.log(maxOfTwoNumbers(3, 9));
+  
+
+
+
+
+/*
+Exercise 2: isAdult()
+
+Write a function named isAdult. It should take an age (number) 
+and return 'Adult' if the age is 18 or over and 'Minor' otherwise.
+
+Example: isAdult(21) should return 'Adult'.
+
+Complete the exercise in the space below:
+*/
+
+function isAdult(age) {
+    if (age >= 18) {
+        return "Adult";
+    } else {
+        return "Minor";
+    }
 }
 
+console.log(isAdult(21));
 
-// ? Question 2: Nested Branching
-// Determine age group based on age.
-// If age is below 13, log "You're a child."
-// If age is between 13 and 19 (inclusive), log "You're a teenager."
-// If age is 20 or above, log "You're an adult."
-const age = 19;
-if (age < 13) {
-    console.log("You're a child.");
-} else if (age >= 13 && age <= 19) {
-    console.log("You're a teenager.");
-} else if (age >= 20) {
-    console.log("You're an adult.")
+
+
+
+
+/*
+Exercise 3: isCharAVowel()
+
+Write a function named isCharAVowel that takes a single character as 
+an argument. It should return true if the character is a vowel and 
+false otherwise. For the purposes of this exercise, the character 
+y should not be considered a vowel.
+
+Example: isCharAVowel('a') should return true.
+
+Complete the exercise in the space below:
+*/
+
+
+
+
+function isCharAVowel(character) {
+    if (character === "a" || character === "e" || character === "i" || character === "o" || character === "u") {
+        return  true;
+    } else {
+        return  false;
+    }
 }
 
-// ? Question 3: Logical Operators
-// Check if a number is divisible by both 3 and 5.
-// If true, log "Divisible by both 3 and 5."
-// Otherwise, log "Not divisible by both 3 and 5."
-number = 30
-if (number % 3 === 0 && number % 5 === 0) {
-    console.log("Divisible by both 3 and 5.");
-} else {
-    console.log("Not divisible by both 3 and 5.");
+console.log(isCharAVowel("a"));
+
+
+
+
+
+/*
+Exercise 4: generateEmail()
+
+Create a function named generateEmail. It should take two strings: 
+a name and a domain. It should return a simple email address.
+
+Example: generateEmail('johnsmith', 'example.com') 
+should return 'johnsmith@example.com'.
+
+Complete the exercise in the space below:
+*/
+
+function generateEmail(name, domain) {
+return name + "@" + domain;
 }
 
-// ? Question 4: Looping (for loop)
-// Print all numbers from 1 to 10.
-for (let number = 1; number <= 10; number++) {
-    console.log(number);
+console.log(generateEmail("johnsmith", "example.com"));
+
+
+
+
+
+/*
+Exercise 5: greetUser()
+
+Define a function called greetUser. It should take a name and a 
+time of day (morning, afternoon, evening) and return a personalized 
+greeting.
+
+Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
+
+Complete the exercise in the space below:
+*/
+
+function greetUser(name, timeOfDay) {
+    return (`Good ${timeOfDay}, ${name}!`);
 }
 
-// ? Question 5: Truthy/Falsey
-// Check if a variable is truthy or falsy.
-// Log "Truthy" if the variable is truthy.
-// Log "Falsy" if the variable is falsy.
-const variable = "";
-if (variable) {
-    console.log("Truthy");
-} else {
-    console.log("Falsy");
+console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
+
+
+
+
+
+/*
+Exercise 6: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers 
+and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+
+function maxOfThree(numOne, numTwo, numThree) {
+    if (numOne > numTwo && numOne > numThree) {
+        return numOne;
+    } else if (numTwo > numOne && numTwo > numThree) {
+        return numTwo;
+    } else {
+        return numThree;
+    }
 }
 
-// ? Question 6: While Loop
-// Print numbers from 1 to 5 using a while loop.
-let number = 1
-while (number <= 5) {
-    console.log(number);
-    number++;
+console.log(maxOfThree(5, 10, 8));
+
+
+
+
+
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: 
+the bill amount and the tip percentage (as a whole number). 
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+
+function calculateTip(billAmount, tipPercentage) {
+    return (billAmount * tipPercentage) / 100;
+} 
+
+console.log('Exercise 7 Result:', calculateTip(50, 20));
+
+
+
+
+
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(temperature, tempScale) {
+    if (tempScale === "C") {
+        return (temperature * 9/5) + 32 + " Fahrenheit";
+    } else if (tempScale === "F") {
+        return (temperature - 32) * 5/9 + " Celsius";
+    } else {
+        return "Invalid temperature";
+    }
 }
 
-// ? Question 7: While Loop
-// Print numbers from 5 down to 1 using a while loop.
-let number = 5
-while (number >= 1) {
-    console.log(number);
-    number--;
+console.log(convertTemperature(32, "C"));
+
+
+
+
+
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator. 
+It should take three arguments: two numbers and a string representing 
+an operation ('add', 'subtract', 'multiply', 'divide'). 
+Perform the provided operation on the two numbers. 
+In operations where the order of numbers is important, 
+treat the first parameter as the first operand and the 
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+function basicCalculator(numberOne, numberTwo, operation){
+    if (operation === "add") {
+        return numberOne + numberTwo;
+    } else if (operation === "subtract") {
+        return numberOne - numberTwo;
+    } else if (operation === "multiply") {
+        return numberOne * numberTwo;
+    } else if (operation === "divide") {
+        return numberOne / numberTwo;
+    } else {
+        return "Invalid";
+    }
 }
 
-// ? Question 8: Simple Comparison
-// Write a branching statement to check if a number is greater than 100.
-// Log "Greater than 100" or "Not greater than 100."
-number = 1000;
-if (number > 100) {
-    console.log("Greater than 100")
-} else {
-    console.log("Not greater than 100.")
-}
-
-// ? Question 9: Looping and Summing
-// Use a loop to sum the numbers from 1 to 5 and log the result.
-sum = 0
-for (let number = 1; number <= 5; number++) {
-   console.log(sum += number);
-}
-
-// ? Question 10: Find the Largest Number
-// Declare three variables, setting random integers to them, i.e. 1, 15, 27
-// Write a branching statement that takes the three numbers and determines the largest.
-// Log "The largest number is: X."
-const varOne = 10;
-const varTwo = 20;
-const varThree = 30;
-
-if (varOne > varTwo && varOne > varThree) {
-    console.log("The largest number is " + varOne);
-} else if (varTwo > varOne && varTwo > varThree) {
-    console.log("The largest number is " + varTwo);
-} else {
-    console.log("The largest number is " + varThree);
-}
+console.log(basicCalculator(10, 5, "subtract"));
